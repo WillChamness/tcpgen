@@ -1,23 +1,27 @@
 # TCP Traffic Generator
 This repo contains a Python script to generate quick TCP traffic for testing purposes. 
 
+# Prerequisites
+- Install [Python](https://www.python.org/).
+- Ensure Python is in your `PATH`. In Windows, this option may need to be selected during the installation process.
+- In Windows, ensure that `.py` files are associated with Python. This option may need to be selected during the installation process.
+
+
 # Installation
 If you don't want to type out `python tcpgen.py` or `python3 tcpgen.py` every time you want to run the script, you can follow these instructions.
 ## Windows
-- Install [Python](https://www.python.org/) if necessary
 - Create the `%USERPROFILE%\.local\` and `%USERPROFILE%\.local\bin\` directories
 - Add `%USERPROFILE%\.local\bin` to your `PATH`
 - Add `.PY` to your `PATHTEXT`
 - Move the `tcpgen.py` file to the `%USERPROFILE%\.local\bin\` directory
-- Open a new CMD instance
+- Open a new CMD instance and run `tcpgen`
 
 ## Linux
-- Install Python through your distro's package manager if necessary
 - Ensure that `$HOME/.local/bin` is added to your `PATH`
-- Double check that `/usr/bin/env python3` does not return any errors
+- Some distros use the `python` command and others use `python3`. If `/usr/bin/env python` returns an error, change the shebang to `#!/usr/bin/env python3`
 - Move the `tcpgen.py` file to `~/.local/bin/` with the name `tcpgen` (extension not necessary)
 - `chmod u+x ~/.local/bin/tcpgen`
-- Open a new terminal session
+- Open a new terminal session and run `tcpgen`
 
 # Usage
 ## No CLI Args
