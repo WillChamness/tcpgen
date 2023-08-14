@@ -66,4 +66,4 @@ Here's what it looks like:
 
 ![Ubuntu](./.github/ubuntu_example.png)
 
-Note that the error messages in Windows are different than Linux. In Windows, if the traffic reaches the destination but the traffic is rejected, the traffic will appear to be timed out or dropped. Ubuntu, however, more accurately displays the error message "Connection refused". This is not a bug, but rather a difference in how the operating systems display rejected traffic. This isn't to say that Ubuntu's error messages are necessarily better, however.
+Note that the error messages in Windows are different than Linux. In Windows, if the traffic reaches the destination but the traffic is rejected, the traffic will appear to be timed out or dropped (even with Defender Firewall turned off). Ubuntu, however, more accurately displays the error message "Connection refused". This is not a bug, but rather a difference in how the operating systems display rejected traffic. This isn't to say that Ubuntu's error messages are necessarily better, however.
