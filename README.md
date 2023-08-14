@@ -39,7 +39,7 @@ Exiting...
 ```
 This will prompt you for a host and a list of ports until Ctrl-C is detected.
 ## One CLI Arg
-If there are any CLI arguments, the script expects the first one to be the hostname or IP address. For example:
+If there is only one argument, the script expects it to be the hostname or IP address. For example:
 ```
 >tcpgen localhost
 Resolved localhost to 127.0.0.1
@@ -66,4 +66,4 @@ Here's what it looks like:
 
 ![Ubuntu](./.github/ubuntu_example.png)
 
-Note that the error messages in Windows are different than Linux. In Windows, if the traffic reaches the destination but the traffic is rejected, the traffic will appear to be timed out or dropped. Ubuntu, however, more accurately displays the error message "Connection refused". This is not a bug, but rather a difference in how the operating systems display rejected traffic.
+Note that the error messages in Windows are different than Linux. In Windows, if the traffic reaches the destination but the traffic is rejected, the traffic will appear to be timed out or dropped. Ubuntu, however, more accurately displays the error message "Connection refused". This is not a bug, but rather a difference in how the operating systems display rejected traffic. This isn't to say that Ubuntu's error messages are necessarily better, however.
