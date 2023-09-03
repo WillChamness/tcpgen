@@ -71,9 +71,13 @@ while True:
         print("Invalid port.")
         if not infinite_loop:
             sys.exit()
+    except Exception as e:
+        print("Error encountered:")
+        print(e)
+        sys.exit()
 
     for port in ports:
-        user_exit = False
+        exit_early = False
         try:
             s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
@@ -82,12 +86,16 @@ while True:
 
         except KeyboardInterrupt:
             print("\nExiting...")
-            user_exit = True
+            exit_early = True
         except socket.error as e:
             print(f"{port}:", e)
+        except Exception as e:
+            print("Error encountered:")
+            print(e)
+            exit_early = True
         finally:
             s.close()
-            if user_exit:
+            if exit_early:
                 exit()
 
     if not infinite_loop:
