@@ -11,8 +11,10 @@ This repo contains a Python script to generate quick TCP traffic for testing pur
 If you don't want to type out `python tcpgen.py` or `python3 tcpgen.py` every time you want to run the script, you can follow these instructions.
 ## Windows
 - Create the `%USERPROFILE%\.local\` and `%USERPROFILE%\.local\bin\` directories
-- Add `%USERPROFILE%\.local\bin` to your `PATH`
-- Add `.PY` to your `PATHTEXT`
+- Add `%USERPROFILE%\.local\bin` to your `PATH` and `.PY` to your `PATHTEXT`
+  - Open `File Explorer` > Right click `This PC` > Click `Properties` > Click `Advanced System Settings` > Click `Environment Variables`
+  - Select `Path` for your user (not for your system), click `Edit`, and add `%USERPROFILE%\.local\bin`
+  - Select `PATHTEXT` for your system, click `Edit`, and add `.PY` to the end of the list
 - Move the `tcpgen.py` file to the `%USERPROFILE%\.local\bin\` directory
 - Open a new CMD instance and run `tcpgen`
 
