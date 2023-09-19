@@ -1,5 +1,5 @@
 # TCP Traffic Generator
-This repo contains a Python script to generate quick TCP traffic for testing purposes. 
+A simple Python script with no dependencies for generating quick TCP traffic to test a port on an endpoint. 
 
 # Prerequisites
 - Install [Python](https://www.python.org/).
@@ -13,16 +13,18 @@ If you don't want to type out `python tcpgen.py` or `python3 tcpgen.py` every ti
 - Create the `%USERPROFILE%\.local\` and `%USERPROFILE%\.local\bin\` directories
 - Add `%USERPROFILE%\.local\bin` to your `PATH` and `.PY` to your `PATHTEXT`
   - Open `File Explorer` > Right click `This PC` > Click `Properties` > Click `Advanced System Settings` > Click `Environment Variables`
-  - Select `Path` for your user (not for your system), click `Edit`, and add `%USERPROFILE%\.local\bin`
+  - Select `Path` for your user (not your system), click `Edit`, and add `%USERPROFILE%\.local\bin`
   - Select `PATHTEXT` for your system, click `Edit`, and add `.PY` to the end of the list
 - Move the `tcpgen.py` file to the `%USERPROFILE%\.local\bin\` directory
 - Open a new CMD instance and run `tcpgen`
 
-## Linux
-- Ensure that `$HOME/.local/bin` is added to your `PATH`
-- Some distros use the `python` command and others use `python3`. If `/usr/bin/env python` returns an error, change the shebang to `#!/usr/bin/env python3`
+## Linux/MacOS
+- Ensure that `$HOME/.local/bin` is added to your `PATH`. Instructions may vary. If using Bash:
+  - Search `~/.bashrc` with the command `cat ~/.bashrc | grep PATH` 
+  - If `export PATH=$HOME/.local/bin:$PATH` isn't part of the output, add it to `~/.bashrc`
+- Some distros use the `python` command, and others use `python3`. If `/usr/bin/env python` returns an error, change the shebang to `#!/usr/bin/env python3`
 - Move the `tcpgen.py` file to `~/.local/bin/` with the name `tcpgen` (extension not necessary)
-- `chmod u+x ~/.local/bin/tcpgen`
+- `chmod u+x ~/.local/bin/tcpgen` to make the file executable.
 - Open a new terminal session and run `tcpgen`
 
 # Usage
@@ -41,7 +43,7 @@ Exiting...
 ```
 This will prompt you for a host and a list of ports until Ctrl-C is detected.
 ## One CLI Arg
-If there is only one argument, the script expects it to be the hostname or IP address. For example:
+If there is only one argument, the script expects a hostname or IP address. For example:
 ```
 >tcpgen localhost
 Resolved localhost to 127.0.0.1
@@ -49,7 +51,11 @@ Resolved localhost to 127.0.0.1
 
 >
 ```
-By default, port 22 will be used. You can change this by setting the `DEFAULT_PORTS` variable.
+
+By default, port 22 will be used. You can change this by setting the `DEFAULT_PORTS` variable. For example:
+```
+DEFAULT_PORTS = [22, 80, 443]
+```
 
 ## More Than One CLI Arg
 If there are more than one argument, the first must be the hostname or IP address. The rest are expected to be ports. For example:
