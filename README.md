@@ -58,7 +58,7 @@ DEFAULT_PORTS = [22, 80, 443]
 ```
 
 ## More Than One CLI Arg
-If there are more than one argument, the first must be the hostname or IP address. The rest are expected to be ports. For example:
+If there are multiple arguments, the first must be the hostname or IP address. The rest are expected to be ports. For example:
 ```
 >tcpgen localhost 22 80 443 3389
 Resolved localhost to 127.0.0.1
