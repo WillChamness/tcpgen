@@ -1,6 +1,8 @@
 # TCP Traffic Generator
 
-A simple Python script with no dependencies for generating quick TCP traffic to test a port on an endpoint.
+A Python script with no dependencies for generating quick TCP traffic to test a port on an endpoint.
+
+This project is designed to be a simple alternative to Powershell's `Test-NetConnection -Port` command.
 
 # Prerequisites
 
